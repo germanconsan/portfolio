@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="barras.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="16.574583"
+     inkscape:cx="16.712336"
+     inkscape:cy="29.593505"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <rect
+     style="fill:#ffffff;stroke-width:4.04332;stroke-linejoin:bevel;paint-order:fill markers stroke"
+     id="bar1"
+     width="50.318008"
+     height="7.3003345"
+     x="-0.013825648"
+     y="9.9851665"
+     ry="1.4582905"
+     rx="1.6289979" />
+  <rect
+     style="fill:#ffffff;stroke-width:4.04332;stroke-linejoin:bevel;paint-order:fill markers stroke"
+     id="bar2"
+     width="50.318008"
+     height="7.3003345"
+     x="0.022833591"
+     y="25.053509"
+     ry="1.4582905"
+     rx="1.6289979"
+     inkscape:transform-center-x="6.4846416"
+     inkscape:transform-center-y="-13.566553" />
+  <rect
+     style="fill:#ffffff;stroke-width:4.04332;stroke-linejoin:bevel;paint-order:fill markers stroke"
+     id="bar3"
+     width="50.318008"
+     height="7.3003345"
+     x="0.027952915"
+     y="40.497192"
+     ry="1.4582905"
+     rx="1.6289979"
+     inkscape:transform-center-x="6.4846416"
+     inkscape:transform-center-y="-13.566553" />
+</svg>

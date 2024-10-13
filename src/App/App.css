@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+     background-color: #1f2020;
+}
+
+.app {
+    width: 580px;
+    margin: auto;
+    max-width: 100%;
+    border: 1px solid;
+    padding: 0 2rem 2rem 2rem;
+    margin-top: 2rem;
+    background-color: whitesmoke;
+}
+
+
+.wish-input {
+    border: 0;
+    border-bottom: 3px dashed grey;
+}
+.wish-input__label {
+    font-weight: 700;
+}
+
+.wish-input__field {
+    width: 100%;
+    border: 0;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: transparent;
+}
+
+
+.wish-list {
+    list-style: none;
+    padding: 0;
+}
+
+.wish-list__item {
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.wish-list__item > * + * {
+    margin-left: 1rem;
+}
+
+.wish-list__item input {
+    width: 2rem;
+    height: 2rem;
+}
+
+.wish-list__item--done label {
+    text-decoration: line-through;
+}
+
+.wish-list__item--warnning {
+    color: rgb(255, 187, 0);
+}
+
+.wish-list__item--danger {
+    color: rgb(207, 30, 30);
+}
+
+
+.wish-clear {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: white;
+    font-size: 1.2rem;
+    border: 1px solid grey;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.wish-delete {
+    width: 100%;
+    color: white;
+    padding: 0.5rem;
+    background-color: rgb(204, 71, 71);
+    font-size: 1rem;
+    border: 1px solid rgb(68, 68, 68);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.wish-list__itemText {
+    display: flex;
+    align-items: center;
+}
+
+.wish-list__divDelete {
+    width: 20%;
+}
+
+.delete {
+    display: none;
+}
+.delete-div {
+    width: 65vh;
+    height: 40vh;
+    position: fixed;
+    border: 1px solid;
+    background-color: rgb(150 149 149 / 93%);
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    top: 50%;          /* Posiciona a 50% desde la parte superior */
+    left: 50%;         /* Posiciona a 50% desde la parte izquierda */
+    transform: translate(-50%, -112%);
+}
+
+
+.button-yes {
+    width: 20%;
+    color: white;
+    padding: 0.5rem;
+    background-color: rgb(76, 165, 76);
+    font-size: 1rem;
+    border: 1px solid rgb(68, 68, 68);
+    border-radius: 3px;
+    cursor: pointer;
+}
+.button-no {
+    width: 20%;
+    color: white;
+    padding: 0.5rem;
+    background-color: rgb(204, 71, 71);
+    font-size: 1rem;
+    border: 1px solid rgb(68, 68, 68);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.delete-div__button {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.delete-div__text {
+    text-align: center;
+}

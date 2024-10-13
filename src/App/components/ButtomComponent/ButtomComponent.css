@@ -1,0 +1,112 @@
+.container-buttom{
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 50px 50px 0px 0px;
+    
+}
+
+@media (max-width: 500px) {
+
+    .container-buttom{
+        height: 5%;
+    }
+
+    .container-buttom-buttom{
+        
+        width: 90px;
+        height: 45px;
+        
+    }
+    
+} 
+
+
+
+.custom-button {
+    background-color: white; /* Button background color */
+    color: black; /* Text color */
+    padding: 15px 30px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    background-color: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .custom-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #2d2d2d;
+    transition: all 0.3s ease;
+    /* border-radius: 50%; */
+    z-index: -1;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  
+  .custom-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.9;
+  }
+  
+  .custom-button:hover {
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+    color: white;
+  }
+  
+  /* Effect of waves under pressure */
+  .custom-button:active::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: ripple 1s ease-out;
+    z-index: -1;
+  }
+  
+  @keyframes ripple {
+    to {
+      transform: translate(-50%, -50%) scale(4);
+      opacity: 0;
+    }
+  }
+  
+  /* Animated text glow effect */
+  .custom-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    transition: all 0.3s ease;
+  }
+  
+  .custom-button:hover::after {
+    left: 112%;
+    transition: all 0.5s ease;
+  }
+  

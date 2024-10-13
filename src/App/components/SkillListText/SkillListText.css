@@ -1,0 +1,192 @@
+.container-skill-list-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+}
+
+.container-skill-list-text-title {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-left: 10%;
+}
+
+.container-skill-list-text-content {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-left: 12%;
+    line-height: 1.5;
+}
+
+.container-skill-list-flex {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permitir que los elementos se envuelvan a la siguiente línea */
+    margin: 0;
+    /* Eliminar márgenes por defecto */
+    padding: 0;
+    /* Eliminar rellenos por defecto */
+    list-style-type: none;
+    /* Eliminar los puntos de la lista */
+}
+
+.container-skill-list-text-content {
+    flex: 0 0 36%;
+    /* Cada ítem ocupa el 50% del ancho del contenedor */
+    box-sizing: border-box;
+    /* Incluye el padding y el border en el cálculo del ancho */
+    padding: 8px;
+    /* Espaciado interno */
+}
+
+.container-skill-list-viewer {
+
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.container-skill-list-viewer-window {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.container-skill-list-viewer-window-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 110%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.container-skill-list-viewer-buttom {
+    z-index: 5;
+    width: 10%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container-skill-list-viewer-buttom-b {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: unset;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+
+.container-skill-list-viewer-buttom-b-r {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: unset;
+    transition: transform .5s;
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.container-skill-list-viewer-buttom-b-r:hover {
+    transform: scale(1.1) rotateY(180deg);
+}
+
+.container-skill-list-viewer-buttom-b:hover {
+    transform: scale(1.1);
+}
+
+.container-skill-list-viewer-buttom-b-arrow1 {
+    width: 18px;
+    background-color: #2d2d2d;
+    border-radius: 5px;
+    height: 5px;
+    transform: rotate(36deg) translateY(7px) translateX(2px);
+}
+
+.container-skill-list-viewer-buttom-b-arrow2 {
+    width: 18px;
+    background-color: #2d2d2d;
+    border-radius: 5px;
+    height: 5px;
+    transform: rotate(-36deg) translateY(-7px) translateX(2px);
+}
+
+
+@media (max-width: 800px) {
+    .container-skill-list-text {
+
+        width: 100%;
+        align-content: unset;
+    }
+
+    .container-skill-list-text-title {
+        margin-left: 20%;
+    }
+
+
+    .container-skill-list-viewer-item-title {
+        padding-inline-start: 10px;
+        margin-block-start: 0%;
+        margin: 8%;
+        list-style-type: none;
+        font-weight: 700;
+    }
+
+    ul {
+        padding-inline-start: 10px;
+        margin-block-start: 0%;
+        margin: 8%;
+        line-height: 25px;
+    }
+
+    .container-skill-list-text-content {
+        flex: none;
+        box-sizing: unset;
+        padding: 0;
+        margin-left: 0
+    }
+
+
+}
+
+
+@media (max-height: 800px) and (min-width: 1000px) {
+    .container-skill-list-text {
+
+        width: 80%;
+
+        align-content: unset;
+    }
+
+    /* .container-skill-list-text-title{ 
+        margin-left: 20%;
+    }
+    
+
+    ul{
+        padding-inline-start:10px;
+        margin-block-start: 0%;
+        margin: 8%
+    }  */
+
+    .container-skill-list-text-content {
+        flex: 0 0 20%;
+
+    }
+
+
+
+}

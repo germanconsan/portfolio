@@ -1,0 +1,15 @@
+.container-home-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+}
+
+
+@media (max-width: 500px) {
+   
+    .container-home-img {
+        width: 100% !important;
+        height: 70% !important;
+    }
+  }

@@ -1,0 +1,233 @@
+/* Contenedor principal que define la perspectiva */
+.road-container {
+    perspective: 1000px;
+    /* Define la profundidad 3D */
+    height: 100vh;
+    width: 80%;
+    overflow: hidden;
+    /* Evita el desbordamiento */
+    position: relative;
+    perspective-origin: center top;
+    /* Fija la perspectiva */
+}
+
+/* La carretera en 3D */
+.road {
+    width: 23%;
+    /* Ancho relativo a la ventana */
+    height: 200vh;
+    /* Más alta que la ventana, para que sea larga */
+    background: linear-gradient(to bottom, #333 0%, #666 50%, #333 100%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotateX(75deg);
+    /* Inclinación fija */
+    transform-origin: top center;
+    overflow: hidden;
+    /* Para evitar que las líneas se salgan */
+}
+
+
+.road-container-skill {
+    animation: moveSkill 8s linear infinite;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    top: -500vh;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.road-pavement {
+    height: 100%;
+    width: 2%;
+    background-color: black;
+    box-shadow: 3px 3px 3px #303030;
+}
+
+/* Líneas discontinuas de la carretera */
+.road-line {
+    position: absolute;
+    top: -100%;
+    /* Comenzar en la parte superior */
+    left: 50%;
+    width: 2%;
+    height: 50%;
+    /* Longitud reducida para líneas más cortas */
+    background-image: repeating-linear-gradient(white 0%,
+            white 15%,
+            /* Líneas más cortas */
+            transparent 15%,
+            transparent 30%
+            /* Ajustamos el espacio entre líneas */
+        );
+    transform: translateX(-50%);
+    /* Centrar las líneas */
+    animation: moveLines 5s linear infinite;
+    /* Aumentamos la velocidad para un movimiento más suave */
+}
+
+
+.road-line-initial {
+    position: absolute;
+    top: 0%;
+    /* Comenzar en la parte superior */
+    left: 50%;
+    width: 2%;
+    height: 50%;
+    /* Longitud reducida para líneas más cortas */
+    background-image: repeating-linear-gradient(white 0%,
+            white 15%,
+            /* Líneas más cortas */
+            transparent 15%,
+            transparent 30%
+            /* Ajustamos el espacio entre líneas */
+        );
+    transform: translateX(-50%);
+    /* Centrar las líneas */
+    animation: moveLinesInitial 4.8s ease-in-out forwards;
+    /* Aumentamos la velocidad para un movimiento más suave */
+}
+
+
+
+/* Animación para mover las líneas */
+@keyframes moveSkill {
+    0% {
+        top: -500vh;
+        /* Iniciar desde la parte superior */
+    }
+
+    100% {
+        top: 100%;
+        /* Mover completamente hacia abajo */
+    }
+}
+
+
+
+
+/* Animación para mover las líneas */
+@keyframes moveLines {
+    0% {
+        top: -100%;
+        /* Iniciar desde la parte superior */
+    }
+
+    100% {
+        top: 100%;
+        /* Mover completamente hacia abajo */
+    }
+}
+
+
+/* Animación para mover las líneas */
+@keyframes moveLinesInitial {
+    0% {
+        top: 0%;
+        /* Iniciar desde la parte superior */
+    }
+
+    100% {
+        top: 100%;
+        /* Mover completamente hacia abajo */
+    }
+}
+
+/* Ajustes en el desfase para mayor continuidad */
+.road-line:nth-child(1) {
+    animation-delay: 0s;
+    /* Sin retraso para la primera línea */
+
+}
+
+.road-line:nth-child(2) {
+    animation-delay: 1.4s;
+    /* Desfase reducido */
+
+}
+
+.road-line:nth-child(3) {
+    animation-delay: 2.8s;
+    /* Desfase reducido */
+}
+
+.road-line:nth-child(4) {
+    animation-delay: 3.9s;
+    /* Desfase reducido */
+
+}
+
+
+.road-container-skill-boom {
+    width: 60px;
+    transform: rotateX(-347deg);
+}
+
+
+@media (max-width: 900px) {
+    .road-container {
+        height: 70vh;
+        top: calc(100vh - 93vh);
+        width: 100%;
+    }
+
+    .road {
+        width: 32%;
+    }
+}
+
+li::marker {
+    font-weight: 700
+}
+.details summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    list-style-type: none;
+    position: relative;
+    padding: 20px;
+}
+
+.details {
+    border-bottom: 1px solid white;
+}
+
+.details:last-of-type {
+    border-bottom: none;
+}
+
+.content.open:last-of-type {
+    max-height: 280px;
+}
+
+.details summary::after {
+    content: "+";
+    position: absolute;
+    right: 16px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: transform .3s ease, content 0.2s ease;
+}
+
+.details.open summary::after {
+    content: "×"; /* Cambiar a '×' cuando está abierto */
+    color: #007BFF;
+    transform: rotate(90deg); /* Rotar el icono */
+}
+
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease;
+}
+
+.content.open {
+    max-height: 150px; /* Asegúrate de que sea lo suficientemente grande para tu contenido */
+    transition: max-height 1.5s ease;
+}

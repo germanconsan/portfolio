@@ -1,0 +1,9 @@
+.container-skill-game-items{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-right: 10%;
+    margin-left: 10%;
+}

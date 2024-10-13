@@ -1,0 +1,47 @@
+.container-text {
+    color: white;
+    /* margin: 5% 0px 0px 5%; */
+    width: 50%; 
+
+}
+
+.container-text p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    margin-inline-start: 50px;
+    margin-inline-end: 50px;
+}
+
+
+
+
+
+@media (max-width: 500px) {
+
+    .container-text {
+
+        margin: 0% 0px 0px 4%;
+        width: 90%;
+    }
+
+
+    .container-text p {
+        margin-inline-start: 20px;
+        margin-inline-end: 20px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .container-text {
+        width: 90%;
+        height: auto;
+        
+    }
+}
+
+
+

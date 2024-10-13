@@ -1,0 +1,70 @@
+{
+  "homepage": "https://germanconsan.github.io/portfolio",
+  "name": "myreact-course-wishlist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "vite",
+    "build": "vite build",
+    "lint": "elint --fix src/**/*.{js,jsx}",
+    "format": "prettier --write \"*.{js,jsx,json,css}\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"  
+  },
+  "author": "Germán Conde",
+  "license": "ISC",
+  "dependencies": {
+    "@react-three/drei": "^9.114.0",
+    "@react-three/fiber": "^8.17.9",
+    "animejs": "^3.2.2",
+    "classnames": "^2.5.1",
+    "gh-pages": "^6.2.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^5.3.4",
+    "terser": "^5.34.1",
+    "three": "^0.169.0",
+    "vite": "^5.4.8"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-export-namespace-from": "^7.24.7",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "husky": "^2.4.0",
+    "lint-staged": "^15.2.10",
+    "prettier": "^1.18.2",
+    "vite-plugin-gltf": "^4.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "link-staged"
+    },
+    "link-staged": {
+      "src/**/*.{js,jsx}": [
+        "npm run lint"
+      ],
+      "src/**/*.{js,jsx,json,css,scss}": [
+        "prettier --write",
+        "git add"
+      ]
+    },
+    "eslintConfig": {
+      "extends": "airbnb",
+      "env": {
+        "browser": true
+      },
+      "rules": {
+        "linebreak-style": "off"
+      }
+    },
+    "prettier": {
+      "semi": true
+    }
+  }
+}

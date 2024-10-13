@@ -1,0 +1,118 @@
+.books-List{
+    
+    margin: 0 auto;
+}
+
+.loading{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    border: 8px solid rgba(0, 0, 0, 0.1); /* Light gray background */
+    border-left: 8px solid #3498db; /* Blue color for the spinner */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* BookList.css */
+
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+.book-detail-card {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.book-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.book-description, .book-tags, .book-authors, .book-covers {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.book-description strong, .book-tags strong, .book-authors strong, .book-covers strong {
+    color: #555;
+}
+
+.book-tags {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.book-authors {
+
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.book-covers {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.book-covers img {
+    max-width: 100px;
+    border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+    .book-detail-card {
+        width: 60%;
+    }
+}
+
+.book-button {
+    margin-top: auto; /* Empuja el botón hacia el fondo de la tarjeta */
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+.book-button:hover {
+    background-color: #0056b3;
+}
+
+.book-button{
+    text-decoration: none;
+    color: white;
+}
